@@ -227,8 +227,10 @@ h2, h3 {
 .dress-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(.95rem, 2.4vw, 2.4rem);
+  gap: clamp(1.5rem, 3.6vw, 3.4rem) clamp(.95rem, 2.4vw, 2.4rem);
 }
+
+.dress-media { position: relative; }
 
 .dress-photo {
   aspect-ratio: 5 / 9;
@@ -238,10 +240,6 @@ h2, h3 {
 }
 
 .dress-caption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: .4rem;
   padding-block: .95rem 1rem;
   border-bottom: 1px solid var(--rule);
 }
@@ -260,9 +258,46 @@ h2, h3 {
 .dress-notes { margin-top: .65rem; }
 .concept-note { margin-top: 1.55rem; }
 
-.dress-open,
+.dress-open:not([hidden]) {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.dress-open::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.dress-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  padding: .55rem clamp(.65rem, 1.8vw, 1.1rem);
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-top: 0;
+  font-size: .76rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.dress-action span { font-size: 1rem; }
+
+.dress-open:hover .dress-action,
+.dress-open:focus-visible .dress-action {
+  background: var(--ink);
+  color: var(--cream);
+}
+
 .detail-close {
-  flex: none;
   width: 2.75rem;
   height: 2.75rem;
   border: 1px solid var(--rule);
@@ -272,7 +307,6 @@ h2, h3 {
   cursor: pointer;
 }
 
-.dress-open:hover,
 .detail-close:hover {
   background: var(--ink);
   color: var(--cream);
@@ -337,10 +371,26 @@ body:has(dialog[open]) { overflow: hidden; }
   font-size: clamp(2.6rem, 6vw, 4.4rem);
 }
 
-.detail-sizes {
-  margin-top: 1.25rem;
+.detail-specs {
+  margin: 1.4rem 0 0;
+  border-top: 1px solid var(--rule);
+}
+
+.detail-specs div {
+  display: grid;
+  grid-template-columns: 5.75rem minmax(0, 1fr);
+  gap: .8rem;
+  padding-block: .7rem;
+  border-bottom: 1px solid var(--rule);
   font-size: .85rem;
-  font-weight: 700;
+}
+
+.detail-specs dt { font-weight: 700; }
+.detail-specs dd { margin: 0; }
+
+.detail-description {
+  max-width: 29ch;
+  color: var(--muted);
 }
 
 .detail-close {
