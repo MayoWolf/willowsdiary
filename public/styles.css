@@ -20,7 +20,6 @@
 
 :root {
   color-scheme: light;
-  --paper: #fff9e9;
   --cream: #fef3d3;
   --ink: #3d210e;
   --muted: #70543e;
@@ -37,7 +36,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--cream);
   color: var(--ink);
   font: 1rem/1.55 var(--sans);
 }
@@ -69,17 +68,14 @@ h2, h3 {
   z-index: 2;
   inset: .5rem auto auto .5rem;
   padding: .6rem 1rem;
-  background: var(--paper);
+  background: var(--cream);
   transform: translateY(-150%);
 }
 
 .skip-link:focus { transform: translateY(0); }
 
 .site-header,
-.site-footer {
-  padding-inline: var(--gutter);
-  background: var(--cream);
-}
+.site-footer { padding-inline: var(--gutter); }
 
 .site-header { border-bottom: 1px solid var(--rule); }
 
@@ -168,7 +164,7 @@ h2, h3 {
   margin-top: 1.7rem;
   padding: .9rem 1.1rem;
   background: var(--ink);
-  color: var(--paper);
+  color: var(--cream);
   font-size: .73rem;
   font-weight: 700;
   letter-spacing: .1em;
@@ -279,7 +275,7 @@ h2, h3 {
 .dress-open:hover,
 .detail-close:hover {
   background: var(--ink);
-  color: var(--paper);
+  color: var(--cream);
 }
 
 .dress-open:focus-visible,
@@ -291,8 +287,7 @@ h2, h3 {
   align-items: center;
   gap: 1.4rem clamp(2rem, 8vw, 10rem);
   padding: clamp(3rem, 6vw, 6rem) max(var(--gutter), calc((100% - 62rem) / 2));
-  background: var(--ink);
-  color: var(--cream);
+  border-top: 1px solid var(--rule);
 }
 
 .about p { max-width: 33rem; }
@@ -303,6 +298,7 @@ h2, h3 {
   justify-content: space-between;
   gap: 1.25rem;
   padding-block: 1rem;
+  border-top: 1px solid var(--rule);
 }
 
 .site-footer .wordmark { width: clamp(6rem, 11vw, 8.25rem); }
@@ -312,7 +308,7 @@ dialog {
   max-height: calc(100% - 2rem);
   padding: 0;
   border: 0;
-  background: var(--paper);
+  background: var(--cream);
   color: var(--ink);
 }
 
@@ -351,7 +347,7 @@ body:has(dialog[open]) { overflow: hidden; }
   position: absolute;
   top: .85rem;
   right: .85rem;
-  background: var(--paper);
+  background: var(--cream);
   font-size: 1.4rem;
 }
 
