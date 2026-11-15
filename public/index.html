@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1eb">
+  <meta name="description" content="Willow’s Diary is a collection of party minis in black lace, animal print and sequins. Explore the evening dress edit in sizes XS–L.">
+  <meta property="og:title" content="Willow’s Diary — The After Dark Edit">
+  <meta property="og:description" content="Party minis in black lace, animal print and sequins.">
+  <title>Willow’s Diary — The After Dark Edit</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="lookbook.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Main navigation">
+      <a class="nav-link" href="#dresses">Dresses</a>
+      <a class="wordmark" href="#top" aria-label="Willow’s Diary home">Willow’s <i>Diary</i></a>
+      <a class="nav-link nav-about" href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">The evening collection</p>
+        <h1 id="hero-title">The After <em>Dark Edit</em></h1>
+        <p class="hero-description">Party minis for late plans and last dances.</p>
+        <a class="hero-link" href="#dresses">Explore the dresses <span aria-hidden="true">↓</span></a>
+      </div>
+      <picture class="hero-photo">
+        <source media="(max-width: 620px)" srcset="assets/after-dark-small.webp">
+        <img src="assets/after-dark.webp" width="1280" height="854" fetchpriority="high" alt="Black lace, leopard print and bronze sequin mini dresses on a brass rail against burgundy velvet">
+      </picture>
+    </section>
+
+    <section class="collection" id="dresses" aria-labelledby="collection-title">
+      <header class="collection-header">
+        <h2 id="collection-title">The <em>Dresses</em></h2>
+        <p>Mini dresses <span aria-hidden="true">·</span> Sizes XS–L</p>
+      </header>
+
+      <div class="dress-grid">
+        <article class="dress">
+          <img class="dress-photo" src="assets/midnight-lace.webp" alt="Fitted black lace mini dress with thin straps and scalloped edges" width="512" height="1024" loading="lazy" decoding="async">
+          <div class="dress-caption">
+            <div>
+              <h3>Midnight Lace</h3>
+              <p>Black floral lace</p>
+            </div>
+            <button class="dress-open" type="button" aria-label="View Midnight Lace" aria-haspopup="dialog" hidden><span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="dress-notes">Slim straps and scalloped floral lace give this fitted mini a delicate finish.</p>
+        </article>
+
+        <article class="dress">
+          <img class="dress-photo" src="assets/wild-hour.webp" alt="Brown leopard print mini dress with a square neckline" width="512" height="1024" loading="lazy" decoding="async">
+          <div class="dress-caption">
+            <div>
+              <h3>Wild Hour</h3>
+              <p>Leopard print</p>
+            </div>
+            <button class="dress-open" type="button" aria-label="View Wild Hour" aria-haspopup="dialog" hidden><span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="dress-notes">A square neckline and warm-toned leopard print give this fitted mini its edge.</p>
+        </article>
+
+        <article class="dress">
+          <img class="dress-photo" src="assets/last-dance.webp" alt="Bronze sequin mini dress with a halter neckline" width="512" height="1024" loading="lazy" decoding="async">
+          <div class="dress-caption">
+            <div>
+              <h3>Last Dance</h3>
+              <p>Bronze sequins</p>
+            </div>
+            <button class="dress-open" type="button" aria-label="View Last Dance" aria-haspopup="dialog" hidden><span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="dress-notes">A halter neck and bronze sequins catch the light with every move.</p>
+        </article>
+      </div>
+      <p class="concept-note">Concept imagery shown.</p>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About <em>Willow’s Diary</em></h2>
+      <p>Willow’s Diary is about the fun of getting dressed for a night out. Think short hems, a little peekaboo lace, and enough sparkle to make even a birthday dinner feel like an occasion.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark" href="#top">Willow’s <i>Diary</i></a>
+    <a class="nav-link" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <dialog id="dress-detail" aria-labelledby="detail-title">
+    <div class="detail-layout">
+      <img class="detail-image" src="assets/midnight-lace.webp" alt="" width="512" height="1024" loading="lazy">
+      <div class="detail-copy">
+        <form method="dialog">
+          <button class="detail-close" aria-label="Close dress details" autofocus>×</button>
+        </form>
+        <p class="eyebrow detail-material"></p>
+        <h2 id="detail-title"></h2>
+        <p class="detail-description"></p>
+        <p class="detail-sizes">Sizes XS, S, M, L</p>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
